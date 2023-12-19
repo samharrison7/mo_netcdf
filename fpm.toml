@@ -1,0 +1,20 @@
+name = "mo_netcdf"
+version = "1.0.0"
+license = ""
+author = "David Schaefer"
+maintainer = "David Schaefer"
+copyright = "David Schaefer"
+
+[dependencies]
+netcdf-interfaces = { git = "https://github.com/LKedward/netcdf-interfaces.git" }
+
+[[test]]
+name = "test"
+source-dir = "tests"
+main = "test_setdata.f90"
+
+[install]
+library = true
+
+[fortran]
+implicit-external = true

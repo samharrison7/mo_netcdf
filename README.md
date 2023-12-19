@@ -16,6 +16,15 @@ The module is tested to work with the following compilers:
 ### Older intel compilers
 The support of ifort/13.1 was dropped because of this [bug](https://software.intel.com/en-us/forums/intel-visual-fortran-compiler-for-windows/topic/537784).
 
+## fpm
+
+This fork can be built with the Fortran Package Manager (fpm). Note that the dependency on [netcdf-interfaces](https://github.com/LKedward/netcdf-interfaces) means that the `-fallow-argument-mismatch` flag is needed in GFortran v10 and above.
+
+```bash
+$ fpm test -flag --fallow-argument-mismatch
+$ fpm install -flag --fallow-argument-mismatch
+```
+
 ## Usage
 The below examples can be found in the examples folder.
 
